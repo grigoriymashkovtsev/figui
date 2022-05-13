@@ -1,12 +1,12 @@
 {
     "compilerOptions": {
         "target": "es6",
-        "module": "commonjs",
-        "declaration": true,
-        "outDir": "./lib",
-        "strict": false,
-        "moduleResolution": "node"
-    },
-    "include": ["src"],
-    "exclude": ["node_modules", "**/__tests__/*"]
+
+        "lib": ["es2019", "DOM", "DOM.Iterable"],
+
+        // "typeRoots": ["./node_modules/@types", "./node_modules/@figma"],
+        "moduleResolution": "node",
+
+        "strict": false
+    }
 }

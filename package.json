@@ -2,22 +2,14 @@
     "name": "figui",
     "version": "1.0.0",
     "description": "UI library",
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
     "scripts": {
-        "test": "jest --config jestconfig.json",
-        "build": "tsc",
-        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-        "lint": "tslint -p tsconfig.json",
-        "prepare": "npm run build",
-        "prepublishOnly": "npm test && npm run lint",
-        "preversion": "npm run lint",
-        "version": "npm run format && git add -A src",
-        "postversion": "git push && git push --tags"
+        "build": "rollup -c",
+        "dev": "rollup -c -w",
+        "start": "sirv public",
+        "validate": "svelte-check",
+        "buildtsc": "tsc"
     },
-    "files": [
-        "lib/**/*"
-    ],
+    "main": "./src/index.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/grigoriymashkovtsev/figui.git"
@@ -30,12 +22,42 @@
     },
     "homepage": "https://github.com/grigoriymashkovtsev/figui#readme",
     "devDependencies": {
-        "@types/jest": "^27.5.1",
-        "jest": "^28.1.0",
-        "prettier": "^2.6.2",
-        "ts-jest": "^28.0.2",
-        "tslint": "^6.1.3",
-        "tslint-config-prettier": "^1.18.0",
-        "typescript": "^4.6.4"
+        "@babel/core": "^7.12.13",
+        "@figma/plugin-typings": "^1.26.0",
+        "@rollup/plugin-babel": "^5.2.2",
+        "@rollup/plugin-commonjs": "^16.0.0",
+        "@rollup/plugin-image": "^2.0.6",
+        "@rollup/plugin-node-resolve": "^10.0.0",
+        "@rollup/plugin-typescript": "^6.0.0",
+        "@tsconfig/svelte": "^1.0.0",
+        "cssnano": "^4.1.10",
+        "figma-plugin-ds-svelte": "^1.2.0",
+        "postcss": "^8.2.5",
+        "prettier": "^2.3.0",
+        "prettier-plugin-svelte": "^2.3.0",
+        "rollup": "^2.3.4",
+        "rollup-plugin-css-only": "^3.1.0",
+        "rollup-plugin-embed-css": "^1.0.21",
+        "rollup-plugin-html-bundle": "0.0.3",
+        "rollup-plugin-livereload": "^2.0.0",
+        "rollup-plugin-node-builtins": "^2.1.2",
+        "rollup-plugin-node-globals": "^1.4.0",
+        "rollup-plugin-node-polyfills": "^0.2.1",
+        "rollup-plugin-postcss": "^4.0.0",
+        "rollup-plugin-svelte": "^7.0.0",
+        "rollup-plugin-svelte-svg": "^0.2.3",
+        "rollup-plugin-svg": "^2.0.0",
+        "rollup-plugin-terser": "^7.0.0",
+        "sirv-cli": "^1.0.11",
+        "svelte": "^3.0.0",
+        "svelte-check": "^1.0.0",
+        "svelte-inline-svg": "^1.0.5",
+        "svelte-preprocess": "^4.0.0",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.3"
+    },
+    "dependencies": {
+        "@figma-plugin/helpers": "^0.15.2",
+        "mixpanel-figma": "^2.0.1"
     }
 }
