@@ -7,6 +7,10 @@
         // "typeRoots": ["./node_modules/@types", "./node_modules/@figma"],
         "moduleResolution": "node",
 
-        "strict": false
-    }
+        "strict": false,
+        "declaration": true,
+        "outDir": "./src"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "**/__tests__/*"]
 }
