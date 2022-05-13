@@ -1,6 +1,6 @@
 {
     "name": "figui",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "UI library",
     "scripts": {
         "build": "rollup -c",
@@ -9,6 +9,9 @@
         "validate": "svelte-check",
         "buildtsc": "tsc"
     },
+    "files": [
+        "src"
+    ],
     "main": "./src/index.js",
     "repository": {
         "type": "git",
