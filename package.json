@@ -1,6 +1,6 @@
 {
     "name": "figui",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "UI library",
     "scripts": {
         "build": "rollup -c",
