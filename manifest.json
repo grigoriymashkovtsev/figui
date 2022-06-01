@@ -1,9 +1,0 @@
-{
-    "name": "type.today",
-    "id": "755467873814160138",
-    "api": "1.0.0",
-    "main": "dist/code.js",
-    "ui": "dist/ui.html",
-    "editorType": ["figma"],
-    "relaunchButtons": [{ "command": "open", "name": "type.today screen shooter" }]
-}

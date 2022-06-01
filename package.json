@@ -1,30 +1,43 @@
 {
     "name": "figui",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "description": "UI library for Figma",
+    "svelte": "src/index.ts",
+    "module": "dist/index.mjs",
+    "main": "dist/index.js",
     "scripts": {
-        "build": "rollup -c",
         "dev": "rollup -c -w",
-        "start": "sirv public",
-        "validate": "svelte-check",
-        "tsc": "tsc"
+        "svelte-check": "svelte-check",
+        "build": "rollup -c",
+        "prepublishOnly": "npm run svelte-check && npm run build"
     },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^14.0.0",
+        "@rollup/plugin-node-resolve": "^8.4.0",
+        "@rollup/plugin-typescript": "^5.0.2",
+        "rollup": "^2.21.0",
+        "rollup-plugin-svelte": "^6.1.1",
+        "rollup-plugin-terser": "^6.1.0",
+        "svelte": "^3.0.0",
+        "svelte-check": "^0.1.51",
+        "svelte-preprocess": "^4.10.6",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.7"
+    },
+    "keywords": [
+        "component",
+        "svelte"
+    ],
     "files": [
         "src"
     ],
-    "main": "./src/index.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/grigoriymashkovtsev/figui.git"
     },
-    "keywords": [],
     "author": "",
-    "license": "ISC",
     "bugs": {
         "url": "https://github.com/grigoriymashkovtsev/figui/issues"
     },
-    "homepage": "https://github.com/grigoriymashkovtsev/figui#readme",
-    "dependencies": {
-        "typescript": "^4.7.2"
-    }
+    "homepage": "https://github.com/grigoriymashkovtsev/figui#readme"
 }
