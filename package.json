@@ -1,28 +1,22 @@
 {
     "name": "figui",
-    "version": "0.0.5",
+    "version": "0.0.1",
     "description": "UI library for Figma",
-    "svelte": "src/index.ts",
-    "module": "dist/index.mjs",
-    "main": "dist/index.js",
+    "type": "module",
     "scripts": {
-        "dev": "rollup -c -w",
-        "svelte-check": "svelte-check",
-        "build": "rollup -c",
-        "prepublishOnly": "npm run svelte-check && npm run build"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "check": "svelte-check --tsconfig ./tsconfig.json"
     },
     "devDependencies": {
-        "@rollup/plugin-commonjs": "^14.0.0",
-        "@rollup/plugin-node-resolve": "^8.4.0",
-        "@rollup/plugin-typescript": "^5.0.2",
-        "rollup": "^2.21.0",
-        "rollup-plugin-svelte": "^6.1.1",
-        "rollup-plugin-terser": "^6.1.0",
-        "svelte": "^3.0.0",
-        "svelte-check": "^0.1.51",
-        "svelte-preprocess": "^4.10.6",
-        "tslib": "^2.0.0",
-        "typescript": "^3.9.7"
+        "@sveltejs/vite-plugin-svelte": "^3.0.1",
+        "@tsconfig/svelte": "^5.0.2",
+        "svelte": "^4.2.8",
+        "svelte-check": "^3.6.2",
+        "tslib": "^2.6.2",
+        "typescript": "^5.2.2",
+        "vite": "^5.0.8"
     },
     "keywords": [
         "component",
