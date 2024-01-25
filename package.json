@@ -1,8 +1,16 @@
 {
     "name": "figui",
-    "version": "0.0.101",
+    "version": "0.0.102",
     "description": "UI library for Figma",
     "type": "module",
+    "svelte": "./src/index.js",
+    "main": "./src/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./src/index.d.ts",
+            "svelte": "./src/index.d.ts"
+        }
+    },
     "scripts": {
         "dev": "vite",
         "build": "vite build",

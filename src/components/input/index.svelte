@@ -27,7 +27,8 @@ import { onMount } from 'svelte';
 
 <style>
 input {
-    color: var(--figma-color-text);
+    /* color: var(--figma-color-text); */
+    color: tomato;
     background-color: var(--figma-color-bg);
     border: 1px solid var(--figma-color-border);
     font-size: 11px;
