@@ -1,7 +1,7 @@
 {
     "name": "figui",
-    "version": "0.0.102",
-    "description": "UI library for Figma",
+    "version": "0.0.103",
+    "description": "Svelte UI library for Figma",
     "type": "module",
     "svelte": "./src/index.js",
     "main": "./src/index.d.ts",
