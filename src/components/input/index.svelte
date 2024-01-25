@@ -4,11 +4,6 @@ export let placeholder: string | undefined = undefined;
 export let border: boolean = true;
 export let label: string | undefined = undefined;
 export let labelPosition: 'top' | 'left' = 'left';
-import { onMount } from 'svelte';
-
-// onMount(async () => {
-
-// });
 </script>
 
 <div class="{$$props.class || ''} flex flex-col gap-1 w-full">
@@ -27,8 +22,7 @@ import { onMount } from 'svelte';
 
 <style>
 input {
-    /* color: var(--figma-color-text); */
-    color: tomato;
+    color: var(--figma-color-text);
     background-color: var(--figma-color-bg);
     border: 1px solid var(--figma-color-border);
     font-size: 11px;
