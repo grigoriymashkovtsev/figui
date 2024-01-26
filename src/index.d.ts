@@ -1,2 +1,2 @@
-import Input from './components/Input/index.svelte';
+import Input from './components/Input/Input.svelte';
 export { Input };

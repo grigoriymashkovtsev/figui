@@ -8,7 +8,7 @@ export let labelPosition: 'top' | 'left' = 'left';
 
 <div class="{$$props.class || ''} flex flex-col gap-1 w-full">
     {#if label && labelPosition == 'top'}
-        <label class="text-xs w-full text-figma-color-text">{label}</label>
+        <label>{label}</label>
     {/if}
     <input
         class="{border ? '' : 'no-border'} w-full"
@@ -21,6 +21,13 @@ export let labelPosition: 'top' | 'left' = 'left';
 </div>
 
 <style>
+label {
+    color: var(--figma-color-text);
+    font-size: 11px;
+    line-height: 16px;
+    font-family: inherit;
+    width: 100%;
+}
 input {
     color: var(--figma-color-text);
     background-color: var(--figma-color-bg);
