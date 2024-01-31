@@ -1,7 +1,9 @@
 <script lang="ts">
 import Input from '../src/components/Input/Input.svelte';
+import Text from '../src/components/Text/Text.svelte';
 
 let selected = 'light';
+// import style from '../src/global.css';
 
 // @ts-ignore
 function onChange(event) {
@@ -10,7 +12,7 @@ function onChange(event) {
 </script>
 
 <svelte:head>
-    <!-- <base href="/" /> -->
+    <link rel="stylesheet" href="../src/global.css" />
     {#if selected === 'light'}
         <link rel="stylesheet" href="./css/light.css" />
     {:else}
@@ -29,8 +31,15 @@ function onChange(event) {
 </div>
 
 <main>
-    <Input label={'hello!'}></Input>
+    <!-- <Input label={'hello!'}></Input> -->
+
+    <Text>Test</Text>
+    <Text>Test</Text>
 </main>
 
 <style>
+main {
+    padding: 200px;
+    display: flex;
+}
 </style>

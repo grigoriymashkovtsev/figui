@@ -1,2 +1,7 @@
+// css
+import GlobalCSS from './global.css';
+
+// components
 import Input from './components/Input/Input.svelte';
-export { Input };
+import Text from './components/Text/Text.svelte';
+export { Input, Text, GlobalCSS };
