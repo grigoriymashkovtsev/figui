@@ -7,6 +7,7 @@ import Text from './components/Text/Text.svelte';
 import Button from './components/Button/Button.svelte';
 import IconButton from './components/IconButton/IconButton.svelte';
 import Modal from './components/Modal/Modal.svelte';
+import Checkbox from './components/Checkbox/Checkbox.svelte';
 
 // icons
 import Adjust_32 from './icons/Adjust_32.svelte';
@@ -24,6 +25,7 @@ export {
     Text,
     Button,
     IconButton,
+    Checkbox,
     Modal,
     Adjust_32,
     Close_32,
