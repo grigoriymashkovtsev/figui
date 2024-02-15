@@ -8,10 +8,10 @@ export let labelPosition: 'top' | 'left' = 'left';
 
 <div class="{$$props.class || ''} flex flex-col gap-1 w-full">
     {#if label && labelPosition == 'top'}
-        <label>{label}</label>
+        <label class="text-input-label">{label}</label>
     {/if}
     <input
-        class="{border ? '' : 'no-border'} w-full"
+        class="{border ? '' : 'no-border'} w-full text-input"
         type="text"
         dir="auto"
         placeholder={placeholder}
@@ -21,14 +21,14 @@ export let labelPosition: 'top' | 'left' = 'left';
 </div>
 
 <style>
-label {
+.text-input-label {
     color: var(--figma-color-text);
     font-size: 11px;
     line-height: 16px;
     font-family: inherit;
     width: 100%;
 }
-input {
+.text-input {
     color: var(--figma-color-text);
     background-color: var(--figma-color-bg);
     border: 1px solid var(--figma-color-border);
@@ -41,7 +41,7 @@ input {
     box-sizing: border-box;
 }
 
-input:focus {
+.text-input:focus {
     outline: none;
     border: 1px solid var(--figma-color-border-selected);
     outline-offset: 0;

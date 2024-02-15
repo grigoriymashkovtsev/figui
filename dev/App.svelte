@@ -1,6 +1,7 @@
 <script lang="ts">
 import Input from '../src/components/Input/Input.svelte';
 import Text from '../src/components/Text/Text.svelte';
+import Checkbox from '../src/components/Checkbox/Checkbox.svelte';
 
 let selected = 'light';
 // import style from '../src/global.css';
@@ -33,13 +34,22 @@ function onChange(event) {
 <main>
     <!-- <Input label={'hello!'}></Input> -->
 
-    <Text>Test</Text>
-    <Text>Test</Text>
+    <div class="cont">
+        <Checkbox label="test" checked={false} id="ds"></Checkbox>
+        <Checkbox label="❤️ test" checked={false} id="ds"></Checkbox>
+    </div>
 </main>
 
 <style>
 main {
     padding: 200px;
     display: flex;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    gap: 4px;
 }
 </style>
